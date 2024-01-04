@@ -42,6 +42,7 @@ function abrirTelaCreate() {
 
 
 function abrirTelaEditar(pessoaId) {
+    
     const editarIframe = document.getElementById('meuIFrame');
     editarIframe.src = `editar.html?id=${pessoaId}`;
     document.getElementById('meuBox').style.display = 'block';

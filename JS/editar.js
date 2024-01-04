@@ -1,12 +1,14 @@
-function editarRegistro(primeiroNome, nomeMeio, ultimoNome, CPF) {
+function editar() {
+    debugger
     const body = {
-        primeiroNome: primeiroNome,
-        nomeMeio: nomeMeio,
-        ultimoNome: ultimoNome,
-        CPF: CPF,
+        pessoaId : document.getElementById("pessoaId").value,
+        primeiroNome: document.getElementById("primeiroNome").value,
+        nomeMeio:  document.getElementById("primeiroNome").value,
+        ultimoNome:  document.getElementById("primeiroNome").value,
+        CPF: document.getElementById("primeiroNome").value,
     };
 
-    fetch(`https://localhost:7091/api/Pessoa/UpdateByid/${pessoaId}`, {
+    fetch(`https://localhost:7091/api/Pessoa/UpdateByid/${pessoaId}?novoNome=${primeiroNome}&NNomeMeio=${nomeMeio}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
